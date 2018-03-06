@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "grunt && grunt test",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "compression": "^1.0.11",
@@ -16,7 +18,8 @@
     "express": "^4.8.3",
     "morgan": "^1.2.3",
     "npmlog": "^0.1.1",
-    "socket.io": "^1.0.6"
+    "socket.io": "2.0.2",
+    "snyk": "^1.69.10"
   },
   "devDependencies": {
     "assemble": "~0.4.42",
@@ -64,5 +67,6 @@
     "tcp-socket": "~0.5.0",
     "time-grunt": "^1.0.0",
     "wo-smtpclient": "~0.6.0"
-  }
+  },
+  "snyk": true
 }
